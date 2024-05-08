@@ -1,34 +1,55 @@
 <!DOCTYPE html>
-    <html lang="PT-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <header>
-            <h1> Meu site com menu </h1>
-        </header>
-        <nav>
-            <ul>
-                <li> <a href="#">Página Inicial</a></li>
-                <li> <a href="#"> Sobre</a></li>
-                <li> 
-                    <a href="#"> Serviços</a>
-                    <ul> 
-                        <li> <a href="#">Serviços 1 </a></li>
-                        <li> <a href="#">Serviços 2 </a></li>
-                        <li> <a href="#">Serviços 3 </a></li>
-                    </ul>   
-                </li>
-                <li> <a href="#"> Contato</a> </li>
-            </ul>
-        </nav>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilo para ocultar os serviços */
+        .servico-content {
+            display: none;
+        }
+
+        /* Estilo para exibir os serviços quando o checkbox está marcado */
+        .servico-checkbox:checked + .servico-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site com menu</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li>
+                <label for="servico">Serviços</label>
+                <input type="checkbox" id="servico" class="servico-checkbox">
+                <ul>
+                    <li><label for="servico1">Serviço 1</label></li>
+                    <li><label for="servico2">Serviço 2</label></li>
+                    <li><label for="servico3">Serviço 3</label></li>
+                </ul>
+            </li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
     <main>
-                
-        <p> Seja bem vindo ao meu site com menu </p>
+        <div class="servico-content" id="servico1Content">
+            <p>Conteúdo do Serviço 1</p>
+        </div>
+        <div class="servico-content" id="servico2Content">
+            <p>Conteúdo do Serviço 2</p>
+        </div>
+        <div class="servico-content" id="servico3Content">
+            <p>Conteúdo do Serviço 3</p>
+        </div>
     </main>
-    <footer> <p>KauanToolkit 2024</p> </footer>
-    </body>
-    </html>
+    <footer>
+        <p>KauanToolkit 2024</p>
+    </footer>
+</body>
+</html>
